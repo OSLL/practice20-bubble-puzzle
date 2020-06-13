@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bubble puzzle</string>
+    <string name="rules_title">Коротко об игре</string>
+    <string name="rules_about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat ornare at eu odio eleifend habitasse posuere. Nunc amet, arcu senectus facilisis vulputate tempor viverra nibh. Diam potenti sed aliquam fames quis. Risus scelerisque amet, urna, ac posuere lacus.</string>
 </resources>
