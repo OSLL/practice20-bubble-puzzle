@@ -10,9 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        text.setOnClickListener {
-            val goToRules = Intent(this, Game::class.java)
-            startActivity(goToRules)
-        }
+        startActivity(Intent(this, Start::class.java))
     }
 }

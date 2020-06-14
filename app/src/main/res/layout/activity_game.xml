@@ -5,53 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Game">
+
     <TextView
         android:id="@+id/textVictoryCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/victory_condition"
-        android:textSize="20sp"
         android:textColor="@color/colorTextPrimary"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.10" />
+        app:layout_constraintVertical_bias="0.061" />
+
 
     <TextView
         android:id="@+id/textTimeLost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0:30"
-        android:textSize="50sp"
         android:textColor="@color/colorTextPrimary"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintTop_toBottomOf="@+id/textVictoryCondition"
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/textTimeLostLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/time_lost"
-        android:textSize="15sp"
         android:textColor="@color/colorTextAccent"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.23" />
-
-
-
+        app:layout_constraintVertical_bias="0.225" />
 
     <TextView
         android:id="@+id/textRatio"
