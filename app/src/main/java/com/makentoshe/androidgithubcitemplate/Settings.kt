@@ -14,7 +14,7 @@ class Settings : AppCompatActivity() {
             startActivity(goToRules)
         }
         restart.setOnClickListener {
-            val goToRestart = Intent(this, MainActivity::class.java)
+            val goToRestart = Intent(this, Game::class.java)
             startActivity(goToRestart)
         }
         settings.setOnClickListener {

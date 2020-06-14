@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         text.setOnClickListener {
-            val goToRules = Intent(this, Rules::class.java)
+            val goToRules = Intent(this, Game::class.java)
             startActivity(goToRules)
         }
     }
