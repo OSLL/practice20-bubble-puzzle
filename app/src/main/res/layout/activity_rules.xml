@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/rules_title"
-        android:layout_width="176dp"
-        android:layout_height="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
@@ -37,14 +37,14 @@
 
     <TextView
         android:id="@+id/rules_about"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:gravity="top"
-        android:paddingEnd="40sp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat ornare at eu odio eleifend habitasse posuere. Nunc amet, arcu senectus facilisis vulputate tempor viverra nibh. Diam potenti sed aliquam fames quis. Risus scelerisque amet, urna, ac posuere lacus."
+        android:text="Поле 8х8 заполняется случайными числами. При нажатии на ячейку, числа в соседних вертикальных и горизонтальных клетках увеличиваются на количество очков в нажатой ячейке. Если в строке или столбце все плитки с одинаковыми числами, то они уничтожаются, на их месте появляются новые клетки, и начисляются очки. Также идёт отсчёт обратного времени, по истечению которого игра заканчивается. За каждый уничтоженный ряд добавляется 2 секунды. "
         android:textAppearance="@style/rules_about"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
