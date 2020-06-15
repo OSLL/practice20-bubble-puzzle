@@ -309,6 +309,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         this.updateButtonsValues()
+        this.gameApi.startTimer()
     }
 
     private fun updateButtonsValues() {
