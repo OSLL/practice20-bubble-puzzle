@@ -17,8 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result"
         app:layout_constraintVertical_bias="0.204"
-        app:srcCompat=""
-        tools:srcCompat="@drawable/ic_undraw_winners_ao2o" />
+        app:srcCompat="@drawable/ic_undraw_winners_ao2o" />
 
     <TextView
         android:id="@+id/result_title"
