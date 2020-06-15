@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.widget.Toast
 import com.makentoshe.androidgithubcitemplate.gameLogic.Game
 import kotlinx.android.synthetic.main.activity_game.*
 
@@ -18,8 +20,9 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun onFinish() {
-        val goToRestart = Intent(this, GameActivity::class.java)
-        startActivity(goToRestart)
+        Toast.makeText(this, "Вы набрали ${this.gameApi.score} очков!", Toast.LENGTH_LONG).show()
+        val goToStart = Intent(this, StartActivity::class.java)
+        startActivity(goToStart)
     }
 
     private val gameApi = Game({ i -> onTick(i) }, { onFinish() })
