@@ -10,8 +10,8 @@ class Timer(time: Int, private val onFinish: () -> Any, private val onTick: (Int
         }
 
         override fun onTick(millisUntilFinished: Long) {
-            this.master.timeLost = millisUntilFinished.toInt()
-            this.master.onTick((millisUntilFinished / 1000).toInt())
+            this.master.timeLost = (millisUntilFinished / 1000).toInt()
+            this.master.onTick(this.master.timeLost)
         }
     }
 
