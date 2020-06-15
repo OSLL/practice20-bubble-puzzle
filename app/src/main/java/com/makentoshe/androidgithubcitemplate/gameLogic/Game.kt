@@ -39,9 +39,12 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
     }
 
     private fun checkRow(y: Int) {
+        if (y !in 0..7)
+            return
+
         val key = this[y, 0]
         for (x in 1..7)
-            if (this[y, x] != key)
+            if (this[x, y] != key)
                 return
 
         this.timer.addTime(10)
@@ -49,9 +52,12 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
     }
 
     private fun checkColumn(x: Int) {
+        if (x !in 0..7)
+            return
+
         val key = this[0, x]
         for (y in 1..7)
-            if (this[y, x] != key)
+            if (this[x, y] != key)
                 return
 
         this.timer.addTime(10)
