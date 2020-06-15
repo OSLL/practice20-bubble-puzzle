@@ -1,13 +1,11 @@
 package com.makentoshe.androidgithubcitemplate.gameLogic
 
+import android.os.CountDownTimer
 import kotlin.random.Random
 
-class Game {
+class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
     private val board = Board()
-
-    init {
-        this.generator()
-    }
+    private val timer = Timer(60, onFinish, onTick)
 
     public operator fun get(x: Int, y: Int): Int {
         return this.board[x, y].value
@@ -42,6 +40,7 @@ class Game {
             if (this[y, x] != key)
                 return
 
+        this.timer.addTime(10)
         this.reGenerateRow(y)
     }
 
@@ -51,6 +50,7 @@ class Game {
             if (this[y, x] != key)
                 return
 
+        this.timer.addTime(10)
         this.reGenerateColumn(x)
     }
 
@@ -62,5 +62,13 @@ class Game {
     private fun reGenerateColumn(x: Int) {
         for (y in 0..7)
             this[x, y] = Random.nextInt(1, 9)
+    }
+
+    public fun startTimer() {
+        this.timer.start()
+    }
+
+    public fun stopTimer() {
+        this.timer.stop()
     }
 }
