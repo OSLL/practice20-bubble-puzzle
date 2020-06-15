@@ -20,9 +20,9 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun onFinish() {
-        Toast.makeText(this, "Вы набрали ${this.gameApi.score} очков!", Toast.LENGTH_LONG).show()
-        val goToStart = Intent(this, StartActivity::class.java)
-        startActivity(goToStart)
+        resultScore = this.gameApi.score
+        val goToResult = Intent(this, ResultActivity::class.java)
+        startActivity(goToResult)
     }
 
     private val gameApi = Game({ i -> onTick(i) }, { onFinish() })
