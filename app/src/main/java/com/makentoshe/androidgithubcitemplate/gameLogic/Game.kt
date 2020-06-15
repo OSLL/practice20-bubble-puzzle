@@ -41,8 +41,10 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
         this.score += this[x, y]
 
         this.checkRow(y - 1)
+        this.checkRow(y)
         this.checkRow(y + 1)
         this.checkColumn(x - 1)
+        this.checkColumn(x)
         this.checkColumn(x + 1)
     }
 
