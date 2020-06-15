@@ -313,6 +313,8 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun updateButtonsValues() {
+        textPointsGained.text = this.gameApi.score.toString()
+
         /*
             script-generated code
 
