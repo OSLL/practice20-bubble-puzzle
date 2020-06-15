@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Game">
+    tools:context=".GameActivity">
+
 
     <TextView
         android:id="@+id/textVictoryCondition"
@@ -19,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.042" />
 
 
     <TextView
@@ -32,10 +33,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVictoryCondition"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
 
     <TextView
         android:id="@+id/textTimeLostLabel"
@@ -49,53 +51,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.205" />
 
     <TextView
         android:id="@+id/textRatio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Соотношение тапов к очкам: 101%"
-        android:textSize="15sp"
         android:textColor="@color/colorTextAccent"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.73"/>
-
+        app:layout_constraintVertical_bias="0.745" />
 
     <TextView
         android:id="@+id/textPointsGained"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1337"
-        android:textSize="50sp"
         android:textColor="@color/colorTextPrimary"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82" />
+        app:layout_constraintVertical_bias="0.828" />
 
     <TextView
         android:id="@+id/textPointGainedLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/points_gained"
-        android:textSize="15sp"
         android:textColor="@color/colorTextAccent"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.85"/>
+        app:layout_constraintVertical_bias="0.884" />
 
     <FrameLayout
         android:layout_width="325sp"
@@ -624,17 +623,6 @@
     </FrameLayout>
 
     <ImageButton
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_restart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/restart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPointGainedLabel"
-        app:srcCompat="@drawable/ic_settings" />
-
-    <ImageButton
         android:id="@+id/restart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -645,6 +633,17 @@
         app:layout_constraintStart_toEndOf="@+id/settings"
         app:layout_constraintTop_toBottomOf="@+id/textPointGainedLabel"
         app:srcCompat="@drawable/ic_restart" />
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_restart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/restart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPointGainedLabel"
+        app:srcCompat="@drawable/ic_settings" />
 
     <ImageButton
         android:id="@+id/info"
