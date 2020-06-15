@@ -3,4 +3,5 @@
     <string name="victory_condition">Попробуй достичь 100 очков :)</string>
     <string name="time_lost">Остальось времени</string>
     <string name="points_gained">Очков набрано</string>
+    <string name="game_over">Игра окончена</string>
 </resources>
