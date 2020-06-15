@@ -7,6 +7,10 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
     private val board = Board()
     private val timer = Timer(60, onFinish, onTick)
 
+    init {
+        this.generator()
+    }
+
     public operator fun get(x: Int, y: Int): Int {
         return this.board[x, y].value
     }
