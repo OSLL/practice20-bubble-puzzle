@@ -23,10 +23,10 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
     }
 
     public fun increment(x: Int, y: Int) {
-        this[x + 1, y] += 1
-        this[x, y + 1] += 1
-        this[x - 1, y] += 1
-        this[x, y - 1] += 1
+        this[x + 1, y] += this[x, y]
+        this[x, y + 1] += this[x, y]
+        this[x - 1, y] += this[x, y]
+        this[x, y - 1] += this[x, y]
 
         this.checkRow(y - 1)
         this.checkRow(y + 1)

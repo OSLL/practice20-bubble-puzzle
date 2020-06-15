@@ -307,6 +307,8 @@ class GameActivity : AppCompatActivity() {
             this.gameApi.increment(7, 7)
             this.updateButtonsValues()
         }
+
+        this.updateButtonsValues()
     }
 
     private fun updateButtonsValues() {
