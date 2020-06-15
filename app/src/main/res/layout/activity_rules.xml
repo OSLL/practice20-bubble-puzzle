@@ -8,13 +8,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="282dp"
+        android:layout_height="211dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rules_about"
-        app:layout_constraintVertical_bias="0.203"
+        app:layout_constraintVertical_bias="0.204"
         app:srcCompat="@drawable/undraw_game_day_ucx9_1" />
 
     <TextView
@@ -46,6 +47,7 @@
         android:gravity="top"
         android:text="Поле 8х8 заполняется случайными числами. При нажатии на ячейку, числа в соседних вертикальных и горизонтальных клетках увеличиваются на количество очков в нажатой ячейке. Если в строке или столбце все плитки с одинаковыми числами, то они уничтожаются, на их месте появляются новые клетки, и начисляются очки. Также идёт отсчёт обратного времени, по истечению которого игра заканчивается. За каждый уничтоженный ряд добавляется 2 секунды. "
         android:textAppearance="@style/rules_about"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
