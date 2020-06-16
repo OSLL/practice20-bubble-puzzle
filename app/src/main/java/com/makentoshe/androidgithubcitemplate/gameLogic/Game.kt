@@ -7,7 +7,7 @@ import kotlin.collections.Map
 class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60) {
     private val board = Board()
     private val timer = Timer(time, onFinish, onTick)
-    public var score = 0
+    public var score = 1000
         set(v) {
             if (v < 0)
                 field = 0
@@ -34,12 +34,12 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60
     }
 
     public fun increment(x: Int, y: Int) {
-        this[x + 1, y] += this[x, y]
-        this[x, y + 1] += this[x, y]
         this[x - 1, y] += this[x, y]
         this[x, y - 1] += this[x, y]
+        this[x + 1, y] += this[x, y]
+        this[x, y + 1] += this[x, y]
 
-        this.score += this[x, y]
+        this.score -= this[x, y]
 
         this.checkRow(y - 1)
         this.checkRow(y)
