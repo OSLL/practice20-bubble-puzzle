@@ -4,9 +4,9 @@ import android.os.CountDownTimer
 import kotlin.random.Random
 import kotlin.collections.Map
 
-class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
+class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60) {
     private val board = Board()
-    private val timer = Timer(60, onFinish, onTick)
+    private val timer = Timer(time, onFinish, onTick)
     public var score = 0
         set(v) {
             if (v < 0)
@@ -109,15 +109,42 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
         this.timer.stop()
     }
 
-    public fun toJSON() : String {
-        var s = "{'timeLost':${this.timer.timeLost},'score':${this.score},'cells':["
+    public fun export(): String {
+        var s = "${this.timer.timeLost}&${this.score}"
 
         for (x in 0..7)
             for (y in 0..7)
-                s += "${this[x, y]},"
+                s += "&${this[x, y]}"
 
-        s += "0]}"
+        return s + "&"
+    }
 
-        return s
+    companion object {
+        fun import(s: String, onTick: (Int) -> Any, onFinish: () -> Any) : Game {
+            var i = 0
+            var v = ""
+            while (s[i] != '&') {
+                v += s[i++]
+            }
+            val o = Game(onTick, onFinish, v.toInt())
+            i++
+
+            v = ""
+            while (s[i] != '&') {
+                v += s[i++]
+            }
+            o.score = v.toInt()
+            i++
+
+            for (x in 0..7)
+                for (y in 0..7) {
+                    while (s[i] != '&') {
+                        v += s[i++]
+                    }
+                    o[x, y] = v.toInt()
+                    i++
+                }
+            return o
+        }
     }
 }
