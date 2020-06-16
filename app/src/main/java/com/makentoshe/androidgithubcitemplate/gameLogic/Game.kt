@@ -2,6 +2,7 @@ package com.makentoshe.androidgithubcitemplate.gameLogic
 
 import android.os.CountDownTimer
 import kotlin.random.Random
+import kotlin.collections.Map
 
 class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
     private val board = Board()
@@ -52,26 +53,42 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
         if (y !in 0..7)
             return
 
-        val key = this[y, 0]
-        for (x in 1..7)
-            if (this[x, y] != key)
-                return
+        val count: MutableMap<Int, Int?> = mutableMapOf()
+        for (x in 0..7)
+            if (count.containsKey(this[x, y]))
+                count[this[x, y]] = count[this[x, y]]?.plus(1)
+            else
+                count[this[x, y]] = 1
 
-        this.timer.addTime(10)
-        this.reGenerateRow(y)
+        for (v in count.values)
+            if (v != null) {
+                if (v >= 3) {
+                    this.timer.addTime(10)
+                    this.reGenerateRow(y)
+                    return
+                }
+            }
     }
 
     private fun checkColumn(x: Int) {
         if (x !in 0..7)
             return
 
-        val key = this[0, x]
-        for (y in 1..7)
-            if (this[x, y] != key)
-                return
+        val count: MutableMap<Int, Int?> = mutableMapOf()
+        for (y in 0..7)
+            if (count.containsKey(this[x, y]))
+                count[this[x, y]] = count[this[x, y]]?.plus(1)
+            else
+                count[this[x, y]] = 1
 
-        this.timer.addTime(10)
-        this.reGenerateColumn(x)
+        for (v in count.values)
+            if (v != null) {
+                if (v >= 3) {
+                    this.timer.addTime(10)
+                    this.reGenerateColumn(x)
+                    return
+                }
+            }
     }
 
     private fun reGenerateRow(y: Int) {
