@@ -108,4 +108,16 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
     public fun stopTimer() {
         this.timer.stop()
     }
+
+    public fun toJSON() : String {
+        var s = "{'timeLost':${this.timer.timeLost},'score':${this.score},'cells':["
+
+        for (x in 0..7)
+            for (y in 0..7)
+                s += "${this[x, y]},"
+
+        s += "0]}"
+
+        return s
+    }
 }
