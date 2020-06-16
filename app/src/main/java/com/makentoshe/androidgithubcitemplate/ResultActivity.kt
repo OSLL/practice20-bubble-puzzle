@@ -12,7 +12,7 @@ class ResultActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rules)
+        setContentView(R.layout.activity_result)
         info.setOnClickListener {
             val goToRules = Intent(this, ResultActivity::class.java)
             startActivity(goToRules)
