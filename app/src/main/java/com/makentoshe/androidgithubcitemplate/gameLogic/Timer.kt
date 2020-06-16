@@ -10,21 +10,24 @@ class Timer(time: Int, private val onFinish: () -> Any, private val onTick: (Int
         }
 
         override fun onTick(millisUntilFinished: Long) {
-            this.master.timeLost = (millisUntilFinished / 1000).toInt()
-            this.master.onTick(this.master.timeLost)
+            this.master._timeLost = (millisUntilFinished / 1000).toInt()
+            this.master.onTick(this.master._timeLost)
         }
     }
 
     private var timerObject = TimerClass(time, this)
-    private var timeLost: Int = time
+    private var _timeLost: Int = time
     private var isStarted: Boolean = false
-
+    public val timeLost: Int
+        get() {
+            return this._timeLost
+        }
 
     public fun addTime(time: Int) {
         if (this.isStarted)
             this.timerObject.cancel()
-        this.timeLost += time
-        this.timerObject = TimerClass(this.timeLost, this)
+        this._timeLost += time
+        this.timerObject = TimerClass(this._timeLost, this)
         if (this.isStarted)
             this.timerObject.start()
     }

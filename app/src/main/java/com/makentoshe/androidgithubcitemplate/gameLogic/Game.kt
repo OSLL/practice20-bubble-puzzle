@@ -2,10 +2,11 @@ package com.makentoshe.androidgithubcitemplate.gameLogic
 
 import android.os.CountDownTimer
 import kotlin.random.Random
+import kotlin.collections.Map
 
-class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
+class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60) {
     private val board = Board()
-    private val timer = Timer(60, onFinish, onTick)
+    private val timer = Timer(time, onFinish, onTick)
     public var score = 1000
         set(v) {
             if (v < 0)
@@ -52,26 +53,42 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
         if (y !in 0..7)
             return
 
-        val key = this[y, 0]
-        for (x in 1..7)
-            if (this[x, y] != key)
-                return
+        val count: MutableMap<Int, Int?> = mutableMapOf()
+        for (x in 0..7)
+            if (count.containsKey(this[x, y]))
+                count[this[x, y]] = count[this[x, y]]?.plus(1)
+            else
+                count[this[x, y]] = 1
 
-        this.timer.addTime(10)
-        this.reGenerateRow(y)
+        for (v in count.values)
+            if (v != null) {
+                if (v >= 3) {
+                    this.timer.addTime(10)
+                    this.reGenerateRow(y)
+                    return
+                }
+            }
     }
 
     private fun checkColumn(x: Int) {
         if (x !in 0..7)
             return
 
-        val key = this[0, x]
-        for (y in 1..7)
-            if (this[x, y] != key)
-                return
+        val count: MutableMap<Int, Int?> = mutableMapOf()
+        for (y in 0..7)
+            if (count.containsKey(this[x, y]))
+                count[this[x, y]] = count[this[x, y]]?.plus(1)
+            else
+                count[this[x, y]] = 1
 
-        this.timer.addTime(10)
-        this.reGenerateColumn(x)
+        for (v in count.values)
+            if (v != null) {
+                if (v >= 3) {
+                    this.timer.addTime(10)
+                    this.reGenerateColumn(x)
+                    return
+                }
+            }
     }
 
     private fun reGenerateRow(y: Int) {
@@ -90,5 +107,44 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any) {
 
     public fun stopTimer() {
         this.timer.stop()
+    }
+
+    public fun export(): String {
+        var s = "${this.timer.timeLost}&${this.score}"
+
+        for (x in 0..7)
+            for (y in 0..7)
+                s += "&${this[x, y]}"
+
+        return s + "&"
+    }
+
+    companion object {
+        fun import(s: String, onTick: (Int) -> Any, onFinish: () -> Any) : Game {
+            var i = 0
+            var v = ""
+            while (s[i] != '&') {
+                v += s[i++]
+            }
+            val o = Game(onTick, onFinish, v.toInt())
+            i++
+
+            v = ""
+            while (s[i] != '&') {
+                v += s[i++]
+            }
+            o.score = v.toInt()
+            i++
+
+            for (x in 0..7)
+                for (y in 0..7) {
+                    while (s[i] != '&') {
+                        v += s[i++]
+                    }
+                    o[x, y] = v.toInt()
+                    i++
+                }
+            return o
+        }
     }
 }
