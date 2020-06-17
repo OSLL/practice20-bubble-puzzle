@@ -9,14 +9,22 @@ import android.widget.Toast
 import com.makentoshe.androidgithubcitemplate.gameLogic.Game
 import kotlinx.android.synthetic.main.activity_game.*
 
+var secondsTimer: String = ""
+
+
 class GameActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun onTick(timeLost: Int) {
         val minutes: Int = timeLost / 60
         val seconds = timeLost % 60
+        secondsTimer = if(seconds < 10) {
+            "0$seconds"
+        } else {
+            "$seconds"
+        }
 
-        this.textTimeLost.text = "$minutes:$seconds"
+        this.textTimeLost.text = "$minutes:$secondsTimer"
     }
 
     private fun onFinish() {
