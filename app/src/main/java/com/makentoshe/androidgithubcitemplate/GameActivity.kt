@@ -54,6 +54,8 @@ class GameActivity : AppCompatActivity() {
             startActivity(goToSettings)
         }
 
+
+
         /*
             script-generated code
 
@@ -402,5 +404,8 @@ class GameActivity : AppCompatActivity() {
         cell_7_6.text = this.gameApi[6, 7].toString()
         cell_7_7.text = this.gameApi[7, 7].toString()
     }
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        gameApi.stopTimer()
+    }
 }
