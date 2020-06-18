@@ -39,17 +39,22 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
         info.setOnClickListener {
+            gameApi.stopTimer()
             val goToRules = Intent(this, RulesActivity::class.java)
             startActivity(goToRules)
         }
         restart.setOnClickListener {
+            gameApi.stopTimer()
             val goToRestart = Intent(this, GameActivity::class.java)
             startActivity(goToRestart)
         }
         settings.setOnClickListener {
             val goToSettings = Intent(this, SettingsActivity::class.java)
+            gameApi.stopTimer()
             startActivity(goToSettings)
         }
+
+
 
         /*
             script-generated code
@@ -399,5 +404,8 @@ class GameActivity : AppCompatActivity() {
         cell_7_6.text = this.gameApi[6, 7].toString()
         cell_7_7.text = this.gameApi[7, 7].toString()
     }
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        gameApi.stopTimer()
+    }
 }

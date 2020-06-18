@@ -11,56 +11,42 @@
         android:id="@+id/textVictoryCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="@string/victory_condition"
         android:textColor="@color/colorTextPrimary"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textTimeLost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textTimeLost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="44dp"
         android:text="0:30"
         android:textColor="@color/colorTextPrimary"
         android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textTimeLostLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVictoryCondition" />
 
     <TextView
         android:id="@+id/textTimeLostLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:text="@string/time_lost"
         android:textColor="@color/colorTextAccent"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimeLost" />
 
-    <TextView
-        android:id="@+id/textRatio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Соотношение тапов к очкам: 101%"
-        android:textColor="@color/colorTextAccent"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textPointsGained"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textPointsGained"
@@ -93,12 +79,12 @@
         android:layout_width="282dp"
         android:layout_height="282dp"
         android:background="@color/colorBoardBg"
-        android:orientation="vertical"
-        android:rowCount="8"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textRatio"
+        android:orientation="horizontal"
+        android:columnCount="8"
+        app:layout_constraintBottom_toTopOf="@+id/textPointsGained"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimeLostLabel">
 
         <Button
             android:id="@+id/cell-0-0"
