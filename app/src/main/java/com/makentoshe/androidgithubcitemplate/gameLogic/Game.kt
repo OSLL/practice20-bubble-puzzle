@@ -23,7 +23,7 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60
 
     public operator fun set(x: Int, y: Int, value: Int) {
 
-        this.board[x, y] = value % 100
+        this.board[x, y] = value % 10
     }
 
     public fun generator() {
