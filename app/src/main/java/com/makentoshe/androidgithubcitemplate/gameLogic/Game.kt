@@ -52,7 +52,7 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60
         if (y !in 0..7)
             return
 
-        val key = this[y, 0]
+        val key = this[0, y]
         for (x in 1..7)
             if (this[x, y] != key)
                 return
@@ -66,7 +66,7 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60
         if (x !in 0..7)
             return
 
-        val key = this[0, x]
+        val key = this[x, 0]
         for (y in 1..7)
             if (this[x, y] != key)
                 return
@@ -105,7 +105,7 @@ class Game(onTick: (Int) -> Any, private val onFinish: () -> Any, time: Int = 60
     }
 
     companion object {
-        fun import(s: String, onTick: (Int) -> Any, onFinish: () -> Any) : Game {
+        fun import(s: String, onTick: (Int) -> Any, onFinish: () -> Any): Game {
             var i = 0
             var v = ""
             while (s[i] != '&') {
