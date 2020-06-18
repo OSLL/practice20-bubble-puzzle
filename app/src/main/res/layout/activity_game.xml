@@ -49,18 +49,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textRatio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Соотношение тапов к очкам: 101%"
-        android:textColor="@color/colorTextAccent"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textPointsGained"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textPointsGained"
@@ -96,7 +84,7 @@
         android:orientation="vertical"
         android:rowCount="8"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textRatio"
+        app:layout_constraintBottom_toTopOf="@+id/textPointsGained"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
