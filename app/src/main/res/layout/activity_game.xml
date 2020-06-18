@@ -104,6 +104,7 @@
             android:id="@+id/cell-0-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -111,6 +112,7 @@
             android:id="@+id/cell-0-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -118,6 +120,7 @@
             android:id="@+id/cell-0-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -125,6 +128,7 @@
             android:id="@+id/cell-0-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -132,6 +136,7 @@
             android:id="@+id/cell-0-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -139,6 +144,7 @@
             android:id="@+id/cell-0-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -146,6 +152,7 @@
             android:id="@+id/cell-0-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -153,6 +160,7 @@
             android:id="@+id/cell-0-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -160,6 +168,7 @@
             android:id="@+id/cell-1-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -167,6 +176,7 @@
             android:id="@+id/cell-1-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -174,6 +184,7 @@
             android:id="@+id/cell-1-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -181,6 +192,7 @@
             android:id="@+id/cell-1-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -188,6 +200,7 @@
             android:id="@+id/cell-1-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -195,6 +208,7 @@
             android:id="@+id/cell-1-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -202,6 +216,7 @@
             android:id="@+id/cell-1-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -209,6 +224,7 @@
             android:id="@+id/cell-1-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -216,6 +232,7 @@
             android:id="@+id/cell-2-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -223,6 +240,7 @@
             android:id="@+id/cell-2-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -230,6 +248,7 @@
             android:id="@+id/cell-2-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -237,6 +256,7 @@
             android:id="@+id/cell-2-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -244,6 +264,7 @@
             android:id="@+id/cell-2-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -251,6 +272,7 @@
             android:id="@+id/cell-2-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -258,6 +280,7 @@
             android:id="@+id/cell-2-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -265,6 +288,7 @@
             android:id="@+id/cell-2-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -272,6 +296,7 @@
             android:id="@+id/cell-3-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -279,6 +304,7 @@
             android:id="@+id/cell-3-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -286,6 +312,7 @@
             android:id="@+id/cell-3-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -293,6 +320,7 @@
             android:id="@+id/cell-3-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -300,6 +328,7 @@
             android:id="@+id/cell-3-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -307,6 +336,7 @@
             android:id="@+id/cell-3-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -314,6 +344,7 @@
             android:id="@+id/cell-3-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -321,6 +352,7 @@
             android:id="@+id/cell-3-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -328,6 +360,7 @@
             android:id="@+id/cell-4-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -335,6 +368,7 @@
             android:id="@+id/cell-4-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -342,6 +376,7 @@
             android:id="@+id/cell-4-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -349,6 +384,7 @@
             android:id="@+id/cell-4-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -356,6 +392,7 @@
             android:id="@+id/cell-4-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -363,6 +400,7 @@
             android:id="@+id/cell-4-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -370,6 +408,7 @@
             android:id="@+id/cell-4-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -377,6 +416,7 @@
             android:id="@+id/cell-4-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -384,13 +424,15 @@
             android:id="@+id/cell-5-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
-            android:textSize="10sp" />
+            android:textSize="9sp" />
 
         <Button
             android:id="@+id/cell-5-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -398,6 +440,7 @@
             android:id="@+id/cell-5-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -405,6 +448,7 @@
             android:id="@+id/cell-5-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -412,6 +456,7 @@
             android:id="@+id/cell-5-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -419,6 +464,7 @@
             android:id="@+id/cell-5-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -426,6 +472,7 @@
             android:id="@+id/cell-5-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -433,6 +480,7 @@
             android:id="@+id/cell-5-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -440,6 +488,7 @@
             android:id="@+id/cell-6-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -447,6 +496,7 @@
             android:id="@+id/cell-6-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -454,6 +504,7 @@
             android:id="@+id/cell-6-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -461,6 +512,7 @@
             android:id="@+id/cell-6-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -468,6 +520,7 @@
             android:id="@+id/cell-6-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -475,6 +528,7 @@
             android:id="@+id/cell-6-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -482,6 +536,7 @@
             android:id="@+id/cell-6-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -489,6 +544,7 @@
             android:id="@+id/cell-6-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -496,6 +552,7 @@
             android:id="@+id/cell-7-0"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -503,6 +560,7 @@
             android:id="@+id/cell-7-1"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -510,6 +568,7 @@
             android:id="@+id/cell-7-2"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -517,6 +576,7 @@
             android:id="@+id/cell-7-3"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -524,6 +584,7 @@
             android:id="@+id/cell-7-4"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -531,6 +592,7 @@
             android:id="@+id/cell-7-5"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -538,6 +600,7 @@
             android:id="@+id/cell-7-6"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 
@@ -545,6 +608,7 @@
             android:id="@+id/cell-7-7"
             android:layout_width="35sp"
             android:layout_height="35sp"
+            android:maxLines="1"
             android:text="0"
             android:textSize="10sp" />
 

@@ -14,7 +14,7 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
         info.setOnClickListener {
-            val goToRules = Intent(this, ResultActivity::class.java)
+            val goToRules = Intent(this, RulesActivity::class.java)
             startActivity(goToRules)
         }
         restart.setOnClickListener {
