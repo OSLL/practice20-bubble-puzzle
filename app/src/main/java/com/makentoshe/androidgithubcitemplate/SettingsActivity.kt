@@ -22,4 +22,6 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(goToSettings)
         }
     }
+    override fun onBackPressed() {
+    }
 }

@@ -16,4 +16,6 @@ class StartActivity : AppCompatActivity() {
             startActivity(Intent(this, RulesActivity::class.java))
         }
     }
+    override fun onBackPressed() {
+    }
 }

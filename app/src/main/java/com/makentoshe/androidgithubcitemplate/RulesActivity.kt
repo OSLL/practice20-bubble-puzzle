@@ -24,4 +24,6 @@ class RulesActivity : AppCompatActivity() {
             startActivity(goToSettings)
         }
     }
+    override fun onBackPressed() {
+    }
 }

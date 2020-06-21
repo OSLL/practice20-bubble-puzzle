@@ -28,4 +28,6 @@ class ResultActivity : AppCompatActivity() {
 
         result.text = "Ваш результат: $resultScore"
     }
+    override fun onBackPressed() {
+    }
 }

@@ -405,7 +405,5 @@ class GameActivity : AppCompatActivity() {
         cell_7_7.text = this.gameApi[7, 7].toString()
     }
     override fun onBackPressed() {
-        super.onBackPressed()
-        gameApi.stopTimer()
     }
 }
