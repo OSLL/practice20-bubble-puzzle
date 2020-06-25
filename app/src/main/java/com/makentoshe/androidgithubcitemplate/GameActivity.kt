@@ -32,6 +32,7 @@ class GameActivity : AppCompatActivity() {
         resultScore = this.gameApi.score
         val goToResult = Intent(this, ResultActivity::class.java)
         startActivity(goToResult)
+        finish()
     }
 
     private val gameApi = Game({ i -> onTick(i) }, { onFinish() })
@@ -42,19 +43,19 @@ class GameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_game)
         background.setBackgroundColor(Animation.currentBackgroundColor)
         info.setOnClickListener {
-            gameApi.stopTimer()
             val goToRules = Intent(this, RulesActivity::class.java)
             startActivity(goToRules)
+            finish()
         }
         restart.setOnClickListener {
-            gameApi.stopTimer()
             val goToRestart = Intent(this, GameActivity::class.java)
             startActivity(goToRestart)
+            finish()
         }
         settings.setOnClickListener {
             val goToSettings = Intent(this, SettingsActivity::class.java)
-            gameApi.stopTimer()
             startActivity(goToSettings)
+            finish()
         }
 
 
