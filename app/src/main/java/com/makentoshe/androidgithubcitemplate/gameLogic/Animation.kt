@@ -2,6 +2,7 @@ package com.makentoshe.androidgithubcitemplate.gameLogic
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
 import android.graphics.Color
+import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.random.Random
 
@@ -26,6 +27,9 @@ class Animation {
             objectAnimator.setEvaluator(ArgbEvaluator())
             objectAnimator.start()
             currentBackgroundColor = newColor
+        }
+        fun ChangeTileSize (tile: Button){
+
         }
     }
 }
