@@ -11,9 +11,11 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
+        changeColorsBackground.text = if (Animation.makeAnimation) "Не менять фон" else "Менять фон"
         changeColorsBackground.setOnClickListener {
             Animation.makeAnimation =  !Animation.makeAnimation
             Animation.currentBackgroundColor = Color.WHITE
+            changeColorsBackground.text = if (Animation.makeAnimation) "Не менять фон" else "Менять фон"
         }
         info.setOnClickListener {
             val goToRules = Intent(this, RulesActivity::class.java)
