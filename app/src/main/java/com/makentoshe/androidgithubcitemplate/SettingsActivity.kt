@@ -2,10 +2,12 @@ package com.makentoshe.androidgithubcitemplate
 
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.makentoshe.androidgithubcitemplate.gameLogic.Animation
 import kotlinx.android.synthetic.main.activity_settings.*
+
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,14 @@ class SettingsActivity : AppCompatActivity() {
             Animation.makeAnimation =  !Animation.makeAnimation
             Animation.currentBackgroundColor = Color.WHITE
             changeColorsBackground.text = if (Animation.makeAnimation) "Не менять фон" else "Менять фон"
+        }
+
+        soundButton.setOnClickListener {
+            val toast = Toast.makeText(
+                applicationContext,
+                "Уже скоро!", Toast.LENGTH_SHORT
+            )
+            toast.show()
         }
 
         info.setOnClickListener {
