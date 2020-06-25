@@ -11,9 +11,11 @@ class StartActivity : AppCompatActivity() {
         setContentView(R.layout.activity_start)
         PlayButton.setOnClickListener{
             startActivity(Intent(this, GameActivity::class.java))
+            finish()
         }
         HelpText.setOnClickListener{
             startActivity(Intent(this, RulesActivity::class.java))
+            finish()
         }
     }
     override fun onBackPressed() {
