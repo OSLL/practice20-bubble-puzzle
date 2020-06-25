@@ -71,261 +71,501 @@ class GameActivity : AppCompatActivity() {
                         this.updateButtonsValues()
                 }""" % (y, x, x, y))
          */
+
+        /*
+        Kotlin generate code
+        for (i in 0..7){
+            for (j in 0..7){
+                println("cell_${i}_$j.setOnClickListener {\n" +
+                        "            this.gameApi.increment($j, $i)\n" +
+                        "            this.updateButtonsValues()\n" +
+                        "            Animation.ChangeTileSize(cell_${i}_${j-1})\n" +
+                        "            Animation.ChangeTileSize(cell_${i+1}_${j})\n" +
+                        "            Animation.ChangeTileSize(cell_${i}_${j+1})\n" +
+                        "            Animation.ChangeTileSize(cell_${i-1}_${j})\n" +
+                        "        }")
+            }
+        }*/
+
         cell_0_0.setOnClickListener {
             this.gameApi.increment(0, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_0)
+            Animation.ChangeTileSize(cell_0_1)
         }
         cell_0_1.setOnClickListener {
             this.gameApi.increment(1, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_0_0)
+            Animation.ChangeTileSize(cell_1_1)
+            Animation.ChangeTileSize(cell_0_2)
         }
         cell_0_2.setOnClickListener {
             this.gameApi.increment(2, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_0_1)
+            Animation.ChangeTileSize(cell_1_2)
+            Animation.ChangeTileSize(cell_0_3)
         }
         cell_0_3.setOnClickListener {
             this.gameApi.increment(3, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_0_2)
+            Animation.ChangeTileSize(cell_1_3)
+            Animation.ChangeTileSize(cell_0_4)
         }
         cell_0_4.setOnClickListener {
             this.gameApi.increment(4, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_0_3)
+            Animation.ChangeTileSize(cell_1_4)
+            Animation.ChangeTileSize(cell_0_5)
         }
         cell_0_5.setOnClickListener {
             this.gameApi.increment(5, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_0_4)
+            Animation.ChangeTileSize(cell_1_5)
+            Animation.ChangeTileSize(cell_0_6)
         }
         cell_0_6.setOnClickListener {
             this.gameApi.increment(6, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_0_5)
+            Animation.ChangeTileSize(cell_1_6)
+            Animation.ChangeTileSize(cell_0_7)
         }
         cell_0_7.setOnClickListener {
             this.gameApi.increment(7, 0)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_0_6)
+            Animation.ChangeTileSize(cell_1_7)
         }
         cell_1_0.setOnClickListener {
             this.gameApi.increment(0, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_0)
+            Animation.ChangeTileSize(cell_1_1)
+            Animation.ChangeTileSize(cell_0_0)
         }
         cell_1_1.setOnClickListener {
             this.gameApi.increment(1, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_0)
+            Animation.ChangeTileSize(cell_2_1)
+            Animation.ChangeTileSize(cell_1_2)
+            Animation.ChangeTileSize(cell_0_1)
         }
         cell_1_2.setOnClickListener {
             this.gameApi.increment(2, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_1)
+            Animation.ChangeTileSize(cell_2_2)
+            Animation.ChangeTileSize(cell_1_3)
+            Animation.ChangeTileSize(cell_0_2)
         }
         cell_1_3.setOnClickListener {
             this.gameApi.increment(3, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_2)
+            Animation.ChangeTileSize(cell_2_3)
+            Animation.ChangeTileSize(cell_1_4)
+            Animation.ChangeTileSize(cell_0_3)
         }
         cell_1_4.setOnClickListener {
             this.gameApi.increment(4, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_3)
+            Animation.ChangeTileSize(cell_2_4)
+            Animation.ChangeTileSize(cell_1_5)
+            Animation.ChangeTileSize(cell_0_4)
         }
         cell_1_5.setOnClickListener {
             this.gameApi.increment(5, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_4)
+            Animation.ChangeTileSize(cell_2_5)
+            Animation.ChangeTileSize(cell_1_6)
+            Animation.ChangeTileSize(cell_0_5)
         }
         cell_1_6.setOnClickListener {
             this.gameApi.increment(6, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_5)
+            Animation.ChangeTileSize(cell_2_6)
+            Animation.ChangeTileSize(cell_1_7)
+            Animation.ChangeTileSize(cell_0_6)
         }
         cell_1_7.setOnClickListener {
             this.gameApi.increment(7, 1)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_1_6)
+            Animation.ChangeTileSize(cell_2_7)
+            Animation.ChangeTileSize(cell_0_7)
         }
         cell_2_0.setOnClickListener {
             this.gameApi.increment(0, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_0)
+            Animation.ChangeTileSize(cell_2_1)
+            Animation.ChangeTileSize(cell_1_0)
         }
         cell_2_1.setOnClickListener {
             this.gameApi.increment(1, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_0)
+            Animation.ChangeTileSize(cell_3_1)
+            Animation.ChangeTileSize(cell_2_2)
+            Animation.ChangeTileSize(cell_1_1)
         }
         cell_2_2.setOnClickListener {
             this.gameApi.increment(2, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_1)
+            Animation.ChangeTileSize(cell_3_2)
+            Animation.ChangeTileSize(cell_2_3)
+            Animation.ChangeTileSize(cell_1_2)
         }
         cell_2_3.setOnClickListener {
             this.gameApi.increment(3, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_2)
+            Animation.ChangeTileSize(cell_3_3)
+            Animation.ChangeTileSize(cell_2_4)
+            Animation.ChangeTileSize(cell_1_3)
         }
         cell_2_4.setOnClickListener {
             this.gameApi.increment(4, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_3)
+            Animation.ChangeTileSize(cell_3_4)
+            Animation.ChangeTileSize(cell_2_5)
+            Animation.ChangeTileSize(cell_1_4)
         }
         cell_2_5.setOnClickListener {
             this.gameApi.increment(5, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_4)
+            Animation.ChangeTileSize(cell_3_5)
+            Animation.ChangeTileSize(cell_2_6)
+            Animation.ChangeTileSize(cell_1_5)
         }
         cell_2_6.setOnClickListener {
             this.gameApi.increment(6, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_5)
+            Animation.ChangeTileSize(cell_3_6)
+            Animation.ChangeTileSize(cell_2_7)
+            Animation.ChangeTileSize(cell_1_6)
         }
         cell_2_7.setOnClickListener {
             this.gameApi.increment(7, 2)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_2_6)
+            Animation.ChangeTileSize(cell_3_7)
+            Animation.ChangeTileSize(cell_1_7)
         }
         cell_3_0.setOnClickListener {
             this.gameApi.increment(0, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_0)
+            Animation.ChangeTileSize(cell_3_1)
+            Animation.ChangeTileSize(cell_2_0)
         }
         cell_3_1.setOnClickListener {
             this.gameApi.increment(1, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_0)
+            Animation.ChangeTileSize(cell_4_1)
+            Animation.ChangeTileSize(cell_3_2)
+            Animation.ChangeTileSize(cell_2_1)
         }
         cell_3_2.setOnClickListener {
             this.gameApi.increment(2, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_1)
+            Animation.ChangeTileSize(cell_4_2)
+            Animation.ChangeTileSize(cell_3_3)
+            Animation.ChangeTileSize(cell_2_2)
         }
         cell_3_3.setOnClickListener {
             this.gameApi.increment(3, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_2)
+            Animation.ChangeTileSize(cell_4_3)
+            Animation.ChangeTileSize(cell_3_4)
+            Animation.ChangeTileSize(cell_2_3)
         }
         cell_3_4.setOnClickListener {
             this.gameApi.increment(4, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_3)
+            Animation.ChangeTileSize(cell_4_4)
+            Animation.ChangeTileSize(cell_3_5)
+            Animation.ChangeTileSize(cell_2_4)
         }
         cell_3_5.setOnClickListener {
             this.gameApi.increment(5, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_4)
+            Animation.ChangeTileSize(cell_4_5)
+            Animation.ChangeTileSize(cell_3_6)
+            Animation.ChangeTileSize(cell_2_5)
         }
         cell_3_6.setOnClickListener {
             this.gameApi.increment(6, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_5)
+            Animation.ChangeTileSize(cell_4_6)
+            Animation.ChangeTileSize(cell_3_7)
+            Animation.ChangeTileSize(cell_2_6)
         }
         cell_3_7.setOnClickListener {
             this.gameApi.increment(7, 3)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_3_6)
+            Animation.ChangeTileSize(cell_4_7)
+            Animation.ChangeTileSize(cell_2_7)
         }
         cell_4_0.setOnClickListener {
             this.gameApi.increment(0, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_0)
+            Animation.ChangeTileSize(cell_4_1)
+            Animation.ChangeTileSize(cell_3_0)
         }
         cell_4_1.setOnClickListener {
             this.gameApi.increment(1, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_0)
+            Animation.ChangeTileSize(cell_5_1)
+            Animation.ChangeTileSize(cell_4_2)
+            Animation.ChangeTileSize(cell_3_1)
         }
         cell_4_2.setOnClickListener {
             this.gameApi.increment(2, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_1)
+            Animation.ChangeTileSize(cell_5_2)
+            Animation.ChangeTileSize(cell_4_3)
+            Animation.ChangeTileSize(cell_3_2)
         }
         cell_4_3.setOnClickListener {
             this.gameApi.increment(3, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_2)
+            Animation.ChangeTileSize(cell_5_3)
+            Animation.ChangeTileSize(cell_4_4)
+            Animation.ChangeTileSize(cell_3_3)
         }
         cell_4_4.setOnClickListener {
             this.gameApi.increment(4, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_3)
+            Animation.ChangeTileSize(cell_5_4)
+            Animation.ChangeTileSize(cell_4_5)
+            Animation.ChangeTileSize(cell_3_4)
         }
         cell_4_5.setOnClickListener {
             this.gameApi.increment(5, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_4)
+            Animation.ChangeTileSize(cell_5_5)
+            Animation.ChangeTileSize(cell_4_6)
+            Animation.ChangeTileSize(cell_3_5)
         }
         cell_4_6.setOnClickListener {
             this.gameApi.increment(6, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_5)
+            Animation.ChangeTileSize(cell_5_6)
+            Animation.ChangeTileSize(cell_4_7)
+            Animation.ChangeTileSize(cell_3_6)
         }
         cell_4_7.setOnClickListener {
             this.gameApi.increment(7, 4)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_4_6)
+            Animation.ChangeTileSize(cell_5_7)
+            Animation.ChangeTileSize(cell_3_7)
         }
         cell_5_0.setOnClickListener {
             this.gameApi.increment(0, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_0)
+            Animation.ChangeTileSize(cell_5_1)
+            Animation.ChangeTileSize(cell_4_0)
         }
         cell_5_1.setOnClickListener {
             this.gameApi.increment(1, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_0)
+            Animation.ChangeTileSize(cell_6_1)
+            Animation.ChangeTileSize(cell_5_2)
+            Animation.ChangeTileSize(cell_4_1)
         }
         cell_5_2.setOnClickListener {
             this.gameApi.increment(2, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_1)
+            Animation.ChangeTileSize(cell_6_2)
+            Animation.ChangeTileSize(cell_5_3)
+            Animation.ChangeTileSize(cell_4_2)
         }
         cell_5_3.setOnClickListener {
             this.gameApi.increment(3, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_2)
+            Animation.ChangeTileSize(cell_6_3)
+            Animation.ChangeTileSize(cell_5_4)
+            Animation.ChangeTileSize(cell_4_3)
         }
         cell_5_4.setOnClickListener {
             this.gameApi.increment(4, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_3)
+            Animation.ChangeTileSize(cell_6_4)
+            Animation.ChangeTileSize(cell_5_5)
+            Animation.ChangeTileSize(cell_4_4)
         }
         cell_5_5.setOnClickListener {
             this.gameApi.increment(5, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_4)
+            Animation.ChangeTileSize(cell_6_5)
+            Animation.ChangeTileSize(cell_5_6)
+            Animation.ChangeTileSize(cell_4_5)
         }
         cell_5_6.setOnClickListener {
             this.gameApi.increment(6, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_5)
+            Animation.ChangeTileSize(cell_6_6)
+            Animation.ChangeTileSize(cell_5_7)
+            Animation.ChangeTileSize(cell_4_6)
         }
         cell_5_7.setOnClickListener {
             this.gameApi.increment(7, 5)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_5_6)
+            Animation.ChangeTileSize(cell_6_7)
+            Animation.ChangeTileSize(cell_4_7)
         }
         cell_6_0.setOnClickListener {
             this.gameApi.increment(0, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_0)
+            Animation.ChangeTileSize(cell_6_1)
+            Animation.ChangeTileSize(cell_5_0)
         }
         cell_6_1.setOnClickListener {
             this.gameApi.increment(1, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_0)
+            Animation.ChangeTileSize(cell_7_1)
+            Animation.ChangeTileSize(cell_6_2)
+            Animation.ChangeTileSize(cell_5_1)
         }
         cell_6_2.setOnClickListener {
             this.gameApi.increment(2, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_1)
+            Animation.ChangeTileSize(cell_7_2)
+            Animation.ChangeTileSize(cell_6_3)
+            Animation.ChangeTileSize(cell_5_2)
         }
         cell_6_3.setOnClickListener {
             this.gameApi.increment(3, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_2)
+            Animation.ChangeTileSize(cell_7_3)
+            Animation.ChangeTileSize(cell_6_4)
+            Animation.ChangeTileSize(cell_5_3)
         }
         cell_6_4.setOnClickListener {
             this.gameApi.increment(4, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_3)
+            Animation.ChangeTileSize(cell_7_4)
+            Animation.ChangeTileSize(cell_6_5)
+            Animation.ChangeTileSize(cell_5_4)
         }
         cell_6_5.setOnClickListener {
             this.gameApi.increment(5, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_4)
+            Animation.ChangeTileSize(cell_7_5)
+            Animation.ChangeTileSize(cell_6_6)
+            Animation.ChangeTileSize(cell_5_5)
         }
         cell_6_6.setOnClickListener {
             this.gameApi.increment(6, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_5)
+            Animation.ChangeTileSize(cell_7_6)
+            Animation.ChangeTileSize(cell_6_7)
+            Animation.ChangeTileSize(cell_5_6)
         }
         cell_6_7.setOnClickListener {
             this.gameApi.increment(7, 6)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_6_6)
+            Animation.ChangeTileSize(cell_7_7)
+            Animation.ChangeTileSize(cell_5_7)
         }
         cell_7_0.setOnClickListener {
             this.gameApi.increment(0, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_1)
+            Animation.ChangeTileSize(cell_6_0)
         }
         cell_7_1.setOnClickListener {
             this.gameApi.increment(1, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_0)
+            Animation.ChangeTileSize(cell_7_2)
+            Animation.ChangeTileSize(cell_6_1)
         }
         cell_7_2.setOnClickListener {
             this.gameApi.increment(2, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_1)
+            Animation.ChangeTileSize(cell_7_3)
+            Animation.ChangeTileSize(cell_6_2)
         }
         cell_7_3.setOnClickListener {
             this.gameApi.increment(3, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_2)
+            Animation.ChangeTileSize(cell_7_4)
+            Animation.ChangeTileSize(cell_6_3)
         }
         cell_7_4.setOnClickListener {
             this.gameApi.increment(4, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_3)
+            Animation.ChangeTileSize(cell_7_5)
+            Animation.ChangeTileSize(cell_6_4)
         }
         cell_7_5.setOnClickListener {
             this.gameApi.increment(5, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_4)
+            Animation.ChangeTileSize(cell_7_6)
+            Animation.ChangeTileSize(cell_6_5)
         }
         cell_7_6.setOnClickListener {
             this.gameApi.increment(6, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_5)
+            Animation.ChangeTileSize(cell_7_7)
+            Animation.ChangeTileSize(cell_6_6)
         }
         cell_7_7.setOnClickListener {
             this.gameApi.increment(7, 7)
             this.updateButtonsValues()
+            Animation.ChangeTileSize(cell_7_6)
+            Animation.ChangeTileSize(cell_6_7)
         }
 
         this.updateButtonsValues()

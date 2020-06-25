@@ -2,9 +2,12 @@ package com.makentoshe.androidgithubcitemplate.gameLogic
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
 import android.graphics.Color
+import android.view.animation.Animation
+import android.view.animation.ScaleAnimation
 import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.random.Random
+
 
 class Animation {
     companion object{
@@ -29,7 +32,19 @@ class Animation {
             currentBackgroundColor = newColor
         }
         fun ChangeTileSize (tile: Button){
-
+            val scaleAnimate = ScaleAnimation(
+                0f,
+                1f,
+                0f,
+                1f,
+                Animation.RELATIVE_TO_SELF,
+                0.5f,
+                Animation.RELATIVE_TO_SELF,
+                0.5f
+            )
+            scaleAnimate.duration = 300
+            scaleAnimate.fillAfter = true
+            tile.startAnimation(scaleAnimate)
         }
     }
 }
