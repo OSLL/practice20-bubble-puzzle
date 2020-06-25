@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Toast
+import com.makentoshe.androidgithubcitemplate.gameLogic.Animation
 import com.makentoshe.androidgithubcitemplate.gameLogic.Game
 import kotlinx.android.synthetic.main.activity_game.*
 
@@ -34,10 +35,12 @@ class GameActivity : AppCompatActivity() {
     }
 
     private val gameApi = Game({ i -> onTick(i) }, { onFinish() })
+    var countTaps = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+        background.setBackgroundColor(Animation.currentBackgroundColor)
         info.setOnClickListener {
             gameApi.stopTimer()
             val goToRules = Intent(this, RulesActivity::class.java)
@@ -403,6 +406,11 @@ class GameActivity : AppCompatActivity() {
         cell_7_5.text = this.gameApi[5, 7].toString()
         cell_7_6.text = this.gameApi[6, 7].toString()
         cell_7_7.text = this.gameApi[7, 7].toString()
+        countTaps+=1
+        if (countTaps==5){
+            countTaps = 0
+            Animation.ChangeBackgroundColour(background)
+        }
     }
     override fun onBackPressed() {
     }
