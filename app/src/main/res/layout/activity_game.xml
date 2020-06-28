@@ -36,13 +36,14 @@
 
     <TextView
         android:id="@+id/textPointsGained"
-        android:layout_width="121dp"
-        android:layout_height="85dp"
+        android:layout_width="141dp"
+        android:layout_height="83dp"
+        android:gravity="bottom"
         android:text="1337"
         android:textColor="@color/colorTextPrimary"
         android:textSize="50sp"
         android:textStyle="bold"
-        android:gravity="bottom"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/textPointGainedLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
