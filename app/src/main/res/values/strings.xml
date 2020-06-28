@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Bubble Puzzle</string>
     <string name="victory_condition">Попробуй достичь 100 очков :)</string>
-    <string name="time_lost">Осталось времени \n</string>
+    <string name="time_lost">Осталось времени</string>
     <string name="points_gained">Очков набрано</string>
     <string name="game_over">Игра окончена</string>
 </resources>
