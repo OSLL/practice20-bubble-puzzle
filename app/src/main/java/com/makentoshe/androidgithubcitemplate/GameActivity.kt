@@ -572,6 +572,13 @@ class GameActivity : AppCompatActivity() {
         this.gameApi.startTimer()
     }
 
+
+    override fun onDestroy() {
+        super.onDestroy()
+        gameApi.stopTimer()
+    }
+
+
     private fun updateButtonsValues() {
         textPointsGained.text = this.gameApi.score.toString()
 
